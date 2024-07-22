@@ -56,19 +56,37 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp.router(
-      title: 'MoralMentor',
-      debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-        fontFamily: 'Roboto',
-        textTheme: const TextTheme(
-          headlineLarge: TextStyle(fontSize: 32, fontWeight: FontWeight.bold),
-          headlineMedium: TextStyle(fontSize: 24, fontWeight: FontWeight.w600),
-          bodyLarge: TextStyle(fontSize: 16, height: 1.5),
+    return Container(
+      color: const Color(0xFF001120), // Set the background color here
+      child: MaterialApp.router(
+        title: 'MoralMentor',
+        debugShowCheckedModeBanner: false,
+        theme: ThemeData(
+          primaryColor: const Color(0xFF001120),
+          primarySwatch: const MaterialColor(
+            0xFF001120,
+            {
+              50: Color(0xFFE1E2E3),
+              100: Color(0xFFB3B5B7),
+              200: Color(0xFF80848A),
+              300: Color(0xFF4D535D),
+              400: Color(0xFF26303A),
+              500: Color(0xFF001120),
+              600: Color(0xFF00101C),
+              700: Color(0xFF000E18),
+              800: Color(0xFF000C14),
+              900: Color(0xFF00080D),
+            },
+          ),
+          fontFamily: 'Roboto',
+          textTheme: const TextTheme(
+            headlineLarge: TextStyle(fontSize: 32, fontWeight: FontWeight.bold),
+            headlineMedium: TextStyle(fontSize: 24, fontWeight: FontWeight.w600),
+            bodyLarge: TextStyle(fontSize: 16, height: 1.5),
+          ),
         ),
+        routerConfig: _router,
       ),
-      routerConfig: _router,
     );
   }
 }

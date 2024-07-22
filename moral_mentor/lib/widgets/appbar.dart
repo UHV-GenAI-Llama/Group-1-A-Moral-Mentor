@@ -18,8 +18,11 @@ class ResponsiveAppBar extends StatelessWidget implements PreferredSizeWidget {
         if (constraints.maxWidth > 600) {
           // Web view
           return AppBar(
-            title: const Text('MoralMentor'),
-            backgroundColor: Colors.blue,
+            title: const Text(
+              'MoralMentor',
+              style: TextStyle(color: Colors.cyan),
+            ),
+            backgroundColor: const Color(0xFF001120),
             actions: [
               TextButton(
                 onPressed: () => context.go('/home'),
@@ -34,16 +37,35 @@ class ResponsiveAppBar extends StatelessWidget implements PreferredSizeWidget {
                 child: const Text('Profile', style: TextStyle(color: Colors.white)),
               ),
             ],
+            bottom: const PreferredSize(
+              preferredSize: Size.fromHeight(4.0),
+              child: Divider(
+                height: 4.0,
+                thickness: 2.0,
+                color: Colors.lightGreen,
+              ),
+            ),
           );
         } else {
           // Mobile view
           return AppBar(
-            title: const Text('MoralMentor'),
-            backgroundColor: Colors.blue,
+            title: const Text(
+              'MoralMentor',
+              style: TextStyle(color: Colors.cyan),
+            ),
+            backgroundColor: const Color(0xFF001120),
             leading: Builder(
               builder: (context) => IconButton(
                 icon: const Icon(Icons.menu),
                 onPressed: () => Scaffold.of(context).openDrawer(),
+              ),
+            ),
+            bottom: const PreferredSize(
+              preferredSize: Size.fromHeight(4.0),
+              child: Divider(
+                height: 4.0,
+                thickness: 2.0,
+                color: Colors.lightGreen,
               ),
             ),
           );

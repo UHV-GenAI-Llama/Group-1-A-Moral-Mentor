@@ -82,7 +82,7 @@ class _TypingTextSliderState extends State<TypingTextSlider> {
       duration: const Duration(milliseconds: 500),
       height: widget.textStyle.fontSize,
       width: 2,
-      color: Colors.black,
+      color: Colors.white,
       curve: Curves.easeInOut,
     );
   }
@@ -107,7 +107,7 @@ class HomePage extends StatelessWidget {
           return SingleChildScrollView(
             child: Container(
               width: constraints.maxWidth,
-              color: Colors.white,
+              color: const Color(0xFF001120),
               child: Column(
                 children: [
                   _buildWelcomeSection(constraints),
@@ -161,7 +161,7 @@ class HomePage extends StatelessWidget {
           style: TextStyle(
             fontSize: isWideScreen ? 40 : 30,
             fontWeight: FontWeight.bold,
-            color: Colors.black,
+            color: Colors.white,
           ),
         ),
         const SizedBox(height: 20),
@@ -170,7 +170,7 @@ class HomePage extends StatelessWidget {
           textAlign: TextAlign.center,
           style: TextStyle(
             fontSize: isWideScreen ? 22 : 18,
-            color: Colors.black87,
+            color: Colors.white70,
           ),
         ),
         const SizedBox(height: 20),
@@ -183,7 +183,7 @@ class HomePage extends StatelessWidget {
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   fontSize: isWideScreen ? 24 : 18,
-                  color: Colors.black,
+                  color: Colors.white,
                 ),
               ),
               const SizedBox(height: 8),
@@ -260,7 +260,7 @@ class HomePage extends StatelessWidget {
           child: Center(
             child: Text(
               quote,
-              style: const TextStyle(fontSize: 16.0),
+              style: const TextStyle(fontSize: 16.0, color: Colors.black),
               textAlign: TextAlign.center,
             ),
           ),

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:moral_mentor/models/question.dart';
 import 'package:moral_mentor/data/questions.dart'; // Import the questions from the data file
 import 'package:moral_mentor/widgets/quiz_question.dart';
 import 'package:moral_mentor/widgets/quiz_result.dart';
@@ -97,6 +96,7 @@ class _QuizPageState extends State<QuizPage> {
     return Scaffold(
       appBar: AppBar(
         title: Text('Quiz on ${widget.theme}'),
+        backgroundColor: const Color(0xFF001120), // Updated theme color
         actions: [
           IconButton(
             icon: const Icon(Icons.close),
@@ -126,6 +126,11 @@ class _QuizPageState extends State<QuizPage> {
             const SizedBox(height: 30.0), // Added space between elements
             Card(
               elevation: 0.0, // Removed border by setting elevation to 0
+              shape: RoundedRectangleBorder(
+                side: const BorderSide(color: Colors.white, width: 2.0), // Added cyan border
+                borderRadius: BorderRadius.circular(8.0),
+
+              ),
               child: Padding(
                 padding: const EdgeInsets.all(16.0), // Padding inside each question card
                 child: Column(
@@ -175,6 +180,7 @@ class _QuizPageState extends State<QuizPage> {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Quiz Result'),
+        backgroundColor: const Color(0xFF001120), // Updated theme color
       ),
       body: Center(
         child: Column(

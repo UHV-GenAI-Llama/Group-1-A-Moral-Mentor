@@ -13,14 +13,16 @@ class QuizResult extends StatelessWidget {
     double percentage = (score / totalQuestions) * 100;
 
     return Scaffold(
+      backgroundColor: const Color(0xFF001120), // Set the background color of the Scaffold
       appBar: AppBar(
         title: const Text('Quiz Result'),
+        backgroundColor: const Color(0xFF001120), // Set the background color of the AppBar
       ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text('Your Score: $score', style: const TextStyle(fontSize: 24)),
+            Text('Your Score: $score', style: const TextStyle(fontSize: 24, color: Colors.white)), // Set text color to white for better contrast
             const SizedBox(height: 20),
             SizedBox(
               width: 200,
@@ -54,7 +56,7 @@ class QuizResult extends StatelessWidget {
                       Center(
                         child: Text(
                           '${score}/${totalQuestions}',
-                          style: const TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+                          style: const TextStyle(fontSize: 24, fontWeight: FontWeight.bold, color: Colors.white), // Set text color to white for better contrast
                         ),
                       ),
                     ],

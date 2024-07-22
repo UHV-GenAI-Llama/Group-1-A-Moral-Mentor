@@ -24,6 +24,7 @@ class ScenariosPage extends StatelessWidget {
         userName: 'John Doe',
         profilePicUrl: 'https://example.com/profile_pic.png',
       ),
+      backgroundColor: const Color(0xFF001120), // Set the background color here
       body: Padding(
         padding: const EdgeInsets.all(8.0),
         child: LayoutBuilder(
@@ -57,7 +58,7 @@ class ScenariosPage extends StatelessWidget {
                       style: ElevatedButton.styleFrom(
                         padding: const EdgeInsets.symmetric(vertical: 20.0, horizontal: 30.0), // Increased button padding
                         shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(8.0), // Rounded corners
+                          borderRadius: BorderRadius.circular(10.0), // Rounded corners
                         ),
                       ),
                       onPressed: () {

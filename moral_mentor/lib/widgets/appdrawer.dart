@@ -26,17 +26,17 @@ class AppDrawer extends StatelessWidget {
           ),
           ListTile(
             leading: const Icon(Icons.home),
-            title: const Text('Home'),
+            title: const Text('Home', style: TextStyle(color: Colors.black)),
             onTap: () => context.go('/home'),
           ),
           ListTile(
             leading: const Icon(Icons.book),
-            title: const Text('Scenarios'),
+            title: const Text('Scenarios', style: TextStyle(color: Colors.black)),
             onTap: () => context.go('/scenarios_page'),
           ),
           ListTile(
             leading: const Icon(Icons.person),
-            title: const Text('Profile'),
+            title: const Text('Profile', style: TextStyle(color: Colors.black)),
             onTap: () => context.go('/profile'),
           ),
         ],
